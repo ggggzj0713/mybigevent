@@ -53,7 +53,7 @@ $(function() {
                 if (res.status !== 0) {
                     return layer.msg('更换头像失败')
                 }
-                console.log(res);
+                // console.log(res);
                 layer.msg('更换头像成功');
                 window.parent.getUserInfo();
                 $(".cropper-box #image").attr('src', res.data.user_pic)
@@ -66,7 +66,6 @@ $(function() {
         $.ajax({
             method: 'GET',
             url: '/my/userinfo',
-
             success: function(res) {
                 if (res.status !== 0) {
                     return layer.msg(res.message)
